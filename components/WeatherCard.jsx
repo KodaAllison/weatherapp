@@ -1,12 +1,26 @@
 'use client'
-import React from 'react'
+import React from 'react';
 
 const WeatherCard = ({ weather }) => {
     if (weather) {
         return (
-            <div className='border-black shadow-lg m-4 rounded-xl p-8'>
-                <h1>Location: {weather.location.name}</h1>
-                <h1>Current Temp: {weather.current.temp_c}</h1>
+            <div>
+                <label key={weather.location.name} id={weather.location}>
+                <input type="checkbox" />
+                    <div className="card">
+                        <div className="front">
+                            <header>
+                            <h2>Location: {weather.location.name}</h2>
+                            </header>
+                            <h2>Current Temp: {weather.current.temp_c}</h2>
+                            
+                        </div>
+                        <div className="back">
+                            <h2>feels like: {weather.current.feelslike_c}</h2>
+
+                        </div>
+                    </div>
+                    </label>
             </div>
         )
     }
