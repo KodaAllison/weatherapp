@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 
 const page = () => {
     return (
-        <div>
+        <div className="weather-cards">
             <Weather place="London" />
             <Weather place="New York " />
         </div>

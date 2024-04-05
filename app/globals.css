@@ -2,28 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Header */
 .header {
     width: 100%;
-    background-color: rgb(201, 201, 201);
+    background-color: #3b82f6;
     padding:20px 10px;
     text-align: center;
+}
+
+.header p {
+    color: #1e1e1e;
 }
 
 .header-left{
     float: left;
 }
 
-
 h2, h3, h4 {
     margin: 0;
     font-weight: 500;
 }
 
+body {
+    background-color: #121212;
+}
+
+/* Weather Cards */
+.weather-cards {
+    display: flex;
+}
+
 .card {
-    position: relative;
+    margin: 10px;
+    position: relative; 
     perspective: 1000px;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
+
 }
 
 .card header {
@@ -31,7 +46,6 @@ h2, h3, h4 {
     justify-content: space-between;
     align-items: center;
     height: 40px;
-    margin-bottom: 26px;
 }
 
 .card .front, .card .back {
@@ -53,7 +67,7 @@ h2, h3, h4 {
 }
 
 input {
-    position: absolute;
+    position: relative;
     scale: 0;
 }
 
@@ -65,12 +79,14 @@ input:checked ~ .card .front {
     transform: rotateY(-180deg);
 }
 
-#location :is(var, h3) { color:#3b82f6 }
+#location h2 { color:#3b82f6 }
+
+#location p {
+    color:aliceblue;
+    text-align: center;
+    font-size: 500%;
+}
 
 .card :is(h4, p) {
     opacity: 0.6;
-}
-
-.card p {
-    margin-top: 76px;
 }
