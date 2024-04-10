@@ -6,7 +6,11 @@ const page = () => {
     return (
         <div className="weather-cards">
             <Weather place="London" />
-            <Weather place="New York " />
+            <Weather place="New York" />
+            <Weather place="Tokyo" />
+            <Weather place="Boston" />
+            <Weather place="Berlin" />
+            <Weather place="Sydney" />
         </div>
     )
 }
