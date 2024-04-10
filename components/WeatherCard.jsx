@@ -16,7 +16,9 @@ const WeatherCard = ({ weather }) => {
                             </div>
                             <div className="back">
                                 <h2>Feels like: {weather.current.feelslike_c}</h2>
-
+                                <h2>Wind: {weather.current.wind_mph}, {weather.current.wind_dir}</h2>
+                                <h2>Humidity: {weather.current.humidity}</h2>
+                                <h2>UV: {weather.current.uv}</h2>
                             </div>
                         </div>
                     </label>
