@@ -1,21 +1,33 @@
 'use client'
 import { useState } from 'react'
+import Weather from '@/components/Weather'
 
-const page = () => {
-    const [searchTerm, setSearchTerm] = useState("SEARCH")
+const Page = () => {
+    const [searchTerm, setSearchTerm] = useState("SEARCH");
+    const [inputValue, setInputValue] = useState('SEARCH');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setSearchTerm(inputValue);
+    }
+
+    const handleInput = (e) => {
+        setInputValue(e.target.value);
+    }
 
   return (
     <div>
-      <>
         <input 
             className='searchBox'
-            value={searchTerm}
-            onChange={e => setSearchTerm(e.target.value)}
-        />      
-        <p className='searchResult'>Sarching for {searchTerm}</p>
-      </>
+            value={inputValue}
+            onChange={handleInput}
+        />
+        <button type='submit' onClick={handleSubmit}>SUBMIT</button>
+        
+        <Weather place={searchTerm} />
+        <p className='searchResult'>Searching for {searchTerm}</p>
     </div>
   )
 }
 
-export default page
+export default Page

@@ -15,12 +15,13 @@ const Weather = ({ place }) => {
                 setWeather(data)
                 setIsLoading(false)
             } catch (error) {
+                console.error("FAILED LoADINg w data:", error)
                 setError({ message: 'Failed to load' })
                 setIsLoading(false)
             }
         }
         loadData();
-    }, [])
+    }, [place])
 
     if (isLoading) {
         return (<>

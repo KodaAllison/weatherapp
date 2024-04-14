@@ -6,22 +6,15 @@
 .header {
     width: 100%;
     background-color: #3b82f6;
-    padding:20px 10px;
-    text-align: center;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header p {
     color: #1e1e1e;
 }
-
-.header-left{
-    float: left;
-}
-
-.header-right {
-    float: right;
-}
-
 h2, h3, h4 {
     margin: 0;
     font-weight: 500;
@@ -34,7 +27,7 @@ body {
 /*Search*/
 .searchBox {
     scale:1;
-    width:100%
+    width:30%
 }
 
 .searchResult {
