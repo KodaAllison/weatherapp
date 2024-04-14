@@ -5,7 +5,7 @@ const WeatherCard = ({ weather }) => {
     if (weather) {
         return (
                 <label key={weather.location.name} id='location'>
-                    <input type="checkbox" />
+                    <input className='weatherCard' type="checkbox" />
                         <div className="card">
                             <div className="front">
                                 <header>
