@@ -11,7 +11,7 @@ const WeatherCard = ({ weather }) => {
                                 <header>
                                 <h2>Location: {weather.location.name}</h2>
                                 </header>
-                                <h2>Current Temp: <p>{weather.current.temp_c}</p></h2>
+                                <h2>Current Temp: <p>{weather.current.temp_c}°C</p></h2>
                                 
                             </div>
                             <div className="back">

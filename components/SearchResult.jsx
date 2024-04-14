@@ -38,9 +38,9 @@ const SearchResult = ({ place }) => {
     }
 
     return (
-    <div>
+    <div className="searchResults">
         <h2 className = "searchName">{weather.location.name}</h2>
-        <h2 className="searchName">{weather.current.temp_c}</h2>
+        <h2 className="searchTemp">{weather.current.temp_c}°C</h2>
     </div>
 
     )

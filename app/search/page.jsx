@@ -18,15 +18,15 @@ const Page = () => {
 
   return (
     <div>
+        <div className='searchBox'>
         <input 
-            className='searchBox'
+            className='searchBar'
             value={inputValue}
             onChange={handleInput}
         />
-        <button type='submit' onClick={handleSubmit}>SUBMIT</button>
-        
+        <button type='submit' className='submitBtn' onClick={handleSubmit}>SUBMIT</button>
+        </div>
         <SearchResult place={searchTerm} />
-        <p className='searchResult'>Searching for {searchTerm}</p>
     </div>
   )
 }
