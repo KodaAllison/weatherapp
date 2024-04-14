@@ -100,3 +100,9 @@ input:checked ~ .card .front {
 .card :is(h4, p) {
     opacity: 0.6;
 }
+
+/* Search Results */
+
+.searchName {
+    color:#3b82f6;
+}

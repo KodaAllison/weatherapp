@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Weather from '@/components/Weather'
+import SearchResult from '@/components/SearchResult';
 
 const Page = () => {
     const [searchTerm, setSearchTerm] = useState("SEARCH");
@@ -24,7 +25,7 @@ const Page = () => {
         />
         <button type='submit' onClick={handleSubmit}>SUBMIT</button>
         
-        <Weather place={searchTerm} />
+        <SearchResult place={searchTerm} />
         <p className='searchResult'>Searching for {searchTerm}</p>
     </div>
   )
