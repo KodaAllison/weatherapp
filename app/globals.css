@@ -84,7 +84,7 @@ input:checked ~ .card .front {
 #location p {
     color:aliceblue;
     text-align: center;
-    font-size: 500%;
+    font-size: 400%;
 }
 
 .card :is(h4, p) {
