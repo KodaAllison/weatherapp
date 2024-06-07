@@ -13,6 +13,7 @@ const Page = () => {
     }
 
     const handleInput = (e) => {
+        e.preventDefault()
         setInputValue(e.target.value);
     }
 
