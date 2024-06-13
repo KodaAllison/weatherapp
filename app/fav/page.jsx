@@ -5,6 +5,12 @@ import Weather from '@/components/Weather'
 const Favourites = () => {
     const [favourites, setFavourites] = useState([]);
 
+    const removeFromFavourites = (place) => {
+        const updatedFavourites = favourites.filter(item => item !== place);
+        setFavourites(updatedFavourites);
+        localStorage.setItem('favourites', JSON.stringify(updatedFavourites));
+    };
+
     useEffect(() => {
         const savedFavourites = localStorage.getItem('favourites');
         if (savedFavourites) {
@@ -13,11 +19,15 @@ const Favourites = () => {
     }, []);
 
     return (
-        <div>
-            <h2>Favourites:</h2>
-            <div>
+        <div className='main-content'>
+            <h1>Favourites:</h1>
+            <div className='weather-cards'>
                 {favourites.map((place, index) => (
+                    <div>
                     <Weather key={index} place={place} />
+                    <button className='submitBtn' onClick={() => removeFromFavourites(place)}>Remove</button>
+                    </div>
+                    
                 ))}
             </div>
         </div>

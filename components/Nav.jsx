@@ -14,7 +14,7 @@ const Nav = () => {
         </Link>
       </div>
         
-      <p>WeatherApp</p>
+      <h1>WeatherApp</h1>
       
       <div className='header-right'>
         <div>
