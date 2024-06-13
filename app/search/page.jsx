@@ -4,7 +4,7 @@ import Weather from '@/components/Weather'
 import SearchResult from '@/components/SearchResult';
 
 const Page = () => {
-    const [searchTerm, setSearchTerm] = useState(" ");
+    const [searchTerm, setSearchTerm] = useState();
     const [inputValue, setInputValue] = useState("Search");
     const [favourites, setFavourites] = useState([]);
 
@@ -26,9 +26,10 @@ const Page = () => {
         }
     }, []);
 
-    // Save favourites to local storage whenever it changes
     useEffect(() => {
-        localStorage.setItem('favourites', JSON.stringify(favourites));
+        if (favourites.length > 0) {
+            localStorage.setItem('favourites', JSON.stringify(favourites));
+        }
     }, [favourites]);
     
     const handleAddFavourite = () => {
@@ -48,7 +49,8 @@ const Page = () => {
         <button type='submit' className='submitBtn' onClick={handleSubmit}>SUBMIT</button>
         <button className='submitBtn' onClick={handleAddFavourite}>ADD TO FAVOURITES</button>
         </div>
-        <SearchResult place={searchTerm} />
+        {/* Ensure search only loads if there is a value and once button is clicked */}
+        {searchTerm && <SearchResult place={searchTerm} />} 
         <h2>Favourites:</h2>
         <div >
             {favourites.map((place, index) => (
