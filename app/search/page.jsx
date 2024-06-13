@@ -51,12 +51,7 @@ const Page = () => {
         </div>
         {/* Ensure search only loads if there is a value and once button is clicked */}
         {searchTerm && <SearchResult place={searchTerm} />} 
-        <h2>Favourites:</h2>
-        <div >
-            {favourites.map((place, index) => (
-                <Weather key={index} place={place} />
-            ))}
-        </div>
+
         
     </div>
   )

@@ -15,14 +15,25 @@ const Nav = () => {
       </div>
         
       <p>WeatherApp</p>
+      
+      <div className='header-right'>
+        <div>
+          <Link href="/fav" > 
+              <Image src = "/icons/star.svg" 
+              alt = "Logo"
+              width={30}
+              height={30} />    
+          </Link> 
+        </div>
 
-      <div className="header-right">
-        <Link href="/search" > 
-            <Image src = "/icons/search.svg" 
-            alt = "Logo"
-            width={30}
-            height={30} />    
-        </Link> 
+        <div>
+          <Link href="/search" > 
+              <Image src = "/icons/search.svg" 
+              alt = "Logo"
+              width={30}
+              height={30} />    
+          </Link> 
+        </div>
       </div>
     </div>
   )
