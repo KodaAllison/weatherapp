@@ -4,8 +4,8 @@ import Weather from '@/components/Weather'
 import SearchResult from '@/components/SearchResult';
 
 const Page = () => {
-    const [searchTerm, setSearchTerm] = useState("SEARCH");
-    const [inputValue, setInputValue] = useState('SEARCH');
+    const [searchTerm, setSearchTerm] = useState(" ");
+    const [inputValue, setInputValue] = useState("Search");
     const [favourites, setFavourites] = useState([]);
 
 
@@ -15,6 +15,7 @@ const Page = () => {
     }
 
     const handleInput = (e) => {
+        e.preventDefault();
         setInputValue(e.target.value);
     }
 
