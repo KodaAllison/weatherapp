@@ -23,7 +23,7 @@ const Favourites = () => {
             <h1>Favourites:</h1>
             <div className='weather-cards'>
                 {favourites.map((place, index) => (
-                    <div>
+                    <div key={place}>
                     <Weather key={index} place={place} />
                     <button className='submitBtn' onClick={() => removeFromFavourites(place)}>Remove</button>
                     </div>

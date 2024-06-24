@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export const GET = async (request, {params}) => {
     console.log("params", params)
-    const url = `https://weatherapi-com.p.rapidapi.com/current.json?q=${params.location}`;
+    const url = `https://weatherapi-com.p.rapidapi.com/current.json?q=${params.location}&days=7`;
     const options = {
         method: 'GET',
         headers: {
