@@ -24,7 +24,7 @@ const SearchResult = ({ place }) => {
 
     if (isLoading) {
         return (<>
-            <h1>Is Loading!!!!</h1>
+            <h1>Is Loading!!!!¬`` </h1>
         </>)
     }
 
@@ -44,7 +44,11 @@ const SearchResult = ({ place }) => {
         <h2 className="searchData">Wind: {weather.current.wind_mph}, {weather.current.wind_dir}</h2>
         <h2 className="searchData">Humidity: {weather.current.humidity}</h2>
         <h2 className="searchData">UV: {weather.current.uv}</h2>
+
+        
     </div>
+
+
 
     )
 }

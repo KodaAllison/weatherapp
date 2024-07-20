@@ -8,13 +8,29 @@
     background-color: #3b82f6;
     padding: 20px 10px;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-left {
+    display: flex;
     align-items: center;
 }
 
-.header p {
-    color: #1e1e1e;
+.header-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
+
+.header h1 {
+    color: #1e1e1e;
+    margin-left: 45px;
+    flex: 1;
+    width: max-content;
+    
+}
+
 h2, h3, h4 {
     margin: 0;
     font-weight: 500;
@@ -116,6 +132,8 @@ input:checked ~ .card .front {
 .submitBtn {
     background-color:#3b82f6;
     padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
     border: 5px;
     border-radius: 5px;
 }   
@@ -135,4 +153,19 @@ input:checked ~ .card .front {
     color: #3b82f6;
     font-size: 20px;
     font-weight: 100;
+}
+
+/* Favourites */
+
+h1 {
+    color: #3b82f6;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.Favourites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
