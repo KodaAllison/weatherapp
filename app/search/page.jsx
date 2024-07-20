@@ -16,6 +16,7 @@ const Page = () => {
 
     const handleInput = (e) => {
         e.preventDefault();
+        e.preventDefault()
         setInputValue(e.target.value);
     }
 
