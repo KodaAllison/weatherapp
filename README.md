@@ -1,7 +1,8 @@
 # WeatherApp
 
-A simple weather app that allows the user to search and store cities in a favourites list. 
-Built on NextJS using Rapid APIs weather API (https://rapidapi.com/weatherapi/api/weatherapi-com/) and LocalStorage for the favourites feature
+A simple weather app that allows the user to see various aspects of weather data. The user can search for specific locations and then store these in their favouites list for quick access
+
+Built on NextJS using Rapid APIs weather API (https://rapidapi.com/weatherapi/api/weatherapi-com/). The app makes use of LocalStorage for the favourites feature
 
 ## Install
 
