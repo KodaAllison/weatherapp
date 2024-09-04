@@ -11,12 +11,12 @@ const Page = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
         setSearchTerm(inputValue);
     }
 
     const handleInput = (e) => {
         e.preventDefault();
-        e.preventDefault()
         setInputValue(e.target.value);
     }
 
@@ -47,7 +47,7 @@ const Page = () => {
             value={inputValue}
             onChange={handleInput}
         />
-        <button type='submit' className='submitBtn' onClick={handleSubmit}>SUBMIT</button>
+        <button type='submit' className='submitBtn' onClick={handleSubmit}>SEARCH</button>
         <button className='submitBtn' onClick={handleAddFavourite}>ADD TO FAVOURITES</button>
         </div>
         {/* Ensure search only loads if there is a value and once button is clicked */}
