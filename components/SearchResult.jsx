@@ -2,55 +2,51 @@
 import React, { useEffect, useState } from "react"
 
 const SearchResult = ({ place }) => {
-    const [weather, setWeather] = useState()
-    const [error, setError] = useState()
-    const [isLoading, setIsLoading] = useState(true)
+    const [weather, setWeather] = useState(null);
+    const [error, setError] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const loadData = async () => {
             try {
                 const response = await fetch(`/api/${place}`);
+                if (!response.ok) {
+                    throw new Error(`Error: ${response.status} ${response.statusText}`);
+                }
                 const data = await response.json();
-                setWeather(data)
-                setIsLoading(false)
+                setWeather(data);
             } catch (error) {
-                console.error("FAILED LoADINg w data:", error)
-                setError({ message: 'Failed to load' })
-                setIsLoading(false)
+                setError(error.message);
+            } finally {
+                setIsLoading(false);
             }
-        }
+        };
         loadData();
-    }, [place])
+    }, [place]);
 
     if (isLoading) {
-        return (<>
-            <h1>Is Loading!!!!¬`` </h1>
-        </>)
+        return <h1>Loading...</h1>;
     }
 
     if (error) {
-        return (<div className='error' style={{ color: 'red' }}>
-            <h2>Error Loading</h2>
-            <pre>
-                {JSON.stringify(error, null, 2)}
-            </pre>
-        </div>)
+        return (
+            <div className='error' style={{ color: 'red' }}>
+                <h2>Error Loading Data</h2>
+                <p>{error}</p>
+            </div>
+        );
     }
 
-    return (
-    <div className="searchResults">
-        <h2 className = "searchName">{weather.location.name}</h2>
-        <h2 className="searchData">{weather.current.temp_c}°C</h2>
-        <h2 className="searchData">Wind: {weather.current.wind_mph}, {weather.current.wind_dir}</h2>
-        <h2 className="searchData">Humidity: {weather.current.humidity}</h2>
-        <h2 className="searchData">UV: {weather.current.uv}</h2>
+    return weather ? (
+        <div className="searchResults">
+            <h2 className="searchName">{weather.location.name}</h2>
+            <h2 className="searchData">{weather.current.temp_c}°C</h2>
+            <h2 className="searchData">Wind: {weather.current.wind_mph} mph, {weather.current.wind_dir}</h2>
+            <h2 className="searchData">Humidity: {weather.current.humidity}%</h2>
+            <h2 className="searchData">UV: {weather.current.uv}</h2>
+        </div>
+    ) : null;
+};
 
-        
-    </div>
-
-
-
-    )
-}
 
 export default SearchResult
