@@ -1,21 +1,40 @@
-# WeatherApp
 
-A simple weather app that allows the user to see various aspects of weather data. The user can search for specific locations and then store these in their favouites list for quick access
+# Weather App
 
-Built on NextJS using Rapid APIs weather API (https://rapidapi.com/weatherapi/api/weatherapi-com/). The app makes use of LocalStorage for the favourites feature
+WeatherApp is a simple web application that allows users to search for weather information for various locations and save their favorite locations in local storage for quick access. Built with Next.js, the app uses a weather API to fetch current weather data and displays it to the user.
 
-## Install
+## Installation
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/KodaAllison/weatherapp.git
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+    ```bash
+    npm install
+
+3. Set up your API key: 
+Replace yourAPIkey in the fetch call with your actual API key.
+
+4. Run the development server:
+    ```bash 
+    npm run dev
+
+Open the app: Open http://localhost:3000 in your browser to view the app.
+## Lessons Learned
+
+From this project I got familiar with routing in Next JS aswell as using an API to fetch data. I also learned how local storage can be useful tool to store data and how to do this. I also improved my error handling skills. 
+
+
+## Tech Stack
+
+**NextJS**
+**GitHub**
+**Vercel**
+**RapidAPI**
+
+## Acknowledgements
+
+ - [weatherapi](https://rapidapi.com/weatherapi/api/weatherapi-com/)
 
 
