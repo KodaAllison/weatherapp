@@ -40,7 +40,7 @@ const SearchResult = ({ place }) => {
     }, [place]);
 
     if (isLoading) {
-        return <h1>Loading...</h1>;
+        return <h1>Checking Weather...</h1>;
     }
 
     if (error) {
