@@ -25,7 +25,8 @@ const Weather = ({ place }) => {
 
     if (isLoading) {
         return (<>
-            <h1>Is Loading!!!!</h1>
+            <h1 className="card">Loading Weather Card.</h1>
+
         </>)
     }
 
