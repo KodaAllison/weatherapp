@@ -78,7 +78,7 @@ Used Cursor agents to interact with Claude Sonnet 4.5 model to refresh UI/UX of 
 
 ---
 
-## [1.0.0] - Initial Release
+## [1.0.0] - Initial Release - 2024
 
 ### Features
 - Weather data display for multiple cities
