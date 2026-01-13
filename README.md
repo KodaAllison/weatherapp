@@ -25,11 +25,11 @@ Replace yourAPIkey in the fetch call with your actual API key.
 Open the app: Open http://localhost:3000 in your browser to view the app.
 ## Lessons Learned
 
-#What I learned from v1.0.0 
+### What I learned from v1.0.0 
 - I got familiar with routing in Next JS aswell as using an API to fetch data.
 - I Learned how local storage can be useful tool to store data and how to do this. 
 - I also improved my error handling skills.
-# What I learned from v2.0.0
+### What I learned from v2.0.0
 - Importance of Context management
 - Importance of prompt design
 - Coding with agents, using plan mode effectively
