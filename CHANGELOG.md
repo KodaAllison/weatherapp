@@ -67,6 +67,15 @@ Used Cursor agents to interact with Claude Sonnet 4.5 model to refresh UI/UX of 
   - Resolves Next.js 15 async params requirement
   - Eliminates "params should be awaited" error
 
+### Example Before & After
+#Before: 
+<img width="1919" height="819" alt="Screenshot 2026-01-13 150741" src="https://github.com/user-attachments/assets/429f908e-9873-4b70-9998-2d1e5f3513dd" />
+<img width="1918" height="827" alt="Screenshot 2026-01-13 150823" src="https://github.com/user-attachments/assets/316c239b-5f09-4b81-85cd-83fd1187336f" />
+
+#After:
+<img width="1561" height="819" alt="Screenshot 2026-01-13 154624" src="https://github.com/user-attachments/assets/6424bc22-e32f-496d-bad4-cec62259115f" />
+<img width="1456" height="849" alt="Screenshot 2026-01-13 154641" src="https://github.com/user-attachments/assets/bad3c5ad-6342-497b-8a32-db61b20a74b1" />
+
 ---
 
 ## [1.0.0] - Initial Release
