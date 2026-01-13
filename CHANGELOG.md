@@ -4,6 +4,8 @@
 
 ### 🎨 Major UI/UX Redesign - Courtesy of Sonnet 4.5
 
+Used Cursor agents to interact with Claude Sonnet 4.5 model to refresh UI/UX of this old project. 
+
 #### Design System
 - **Glassmorphism Design**: Complete visual overhaul with modern frosted glass aesthetic
 - **Extended Tailwind Configuration**: Added custom colors, gradients, shadows, and animations
